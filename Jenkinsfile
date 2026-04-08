@@ -17,7 +17,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sonarscanner') {
+                withSonarQubeEnv('sonarserver') {
                     sh '''
                     /usr/local/sonar-scanner/bin/sonar-scanner \
                     -Dsonar.projectKey=todo_app \
