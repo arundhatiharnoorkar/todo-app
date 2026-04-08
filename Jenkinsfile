@@ -17,13 +17,13 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('sonarscanner') {
                     sh '''
                     /usr/local/sonar-scanner/bin/sonar-scanner \
                     -Dsonar.projectKey=todo_app \
                     -Dsonar.sources=. \
                     -Dsonar.host.url=http://localhost:9000 \
-                    -Dsonar.token=YOUR_TOKEN
+                    -Dsonar.token=sqa_03fe139133c0258800da28b0679e2d0672d47fa9
                     '''
                 }
             }
