@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+// 🚨 Hardcoded secret (for demo)
+const password = "admin123";
+
 app.get('/', (req, res) => {
   res.send("Todo App Running");
 });
